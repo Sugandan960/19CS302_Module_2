@@ -1,55 +1,42 @@
-# EX 8 C program for Multiplication and Division of two numbers using functions (Without argument and with return type)
+# EX 9 C program to find the sum of digits using while loop without using modulus operator
 ## DATE:
 ## AIM:
-To write a C program for Multiplication and Division of two numbers using functions (Without argument and with return type)
+To write a C program to find the sum of digits using while loop without using modulus operator
 
 ## Algorithm
 
-1.Start the program and declare function prototypes multiply() and divide().
+1.Start the program and declare variables c, sum, t, and a character array n.
 
-2.In the main() function, call the multiply() function to get the multiplication result and store it in a variable.
+2.Read the input number as a string using scanf to avoid using the modulus operator.
 
-3.Display the multiplication result using printf.
+3.Initialize sum = 0 and c = 0.
 
-4.Call the divide() function, which reads two numbers, performs division, and returns the result.
+4.Use a while loop to traverse each digit until the null character ('\0') is reached; convert each character to an integer using t = n[c] - '0' and add it to sum.
 
-5.Print the division result and end the program.
+5.Display the sum of digits and stop the program.
 
 ## Program:
 ```c
-#include<stdio.h>
-int multiply();
-int divide();
-int main()
-{
-    int r,s;
-    r=multiply();
-    printf("Multiplication: %d\n",r);
-    s=divide();
-    printf("Division: %d",s);
-    
-}
-int multiply()
-{
-    int a,b,c;
-    scanf("%d%d",&a,&b);
-    c=a*b;
-    return c;
-}
-int divide()
-{
-    int d,e,f;
-    scanf("%d%d",&d,&e);
-    f=d/e;
-    return f;
-}
-
-    
+#include <stdio.h>  
+int main()  
+{  
+   int c, sum, t;  
+   char n[1000];  
+   scanf("%s", n);  
+   sum = c = 0;  
+   while (n[c] != '\0') {  
+      t   = n[c] - '0';   
+      sum = sum + t;  
+      c++;  
+   }  
+   printf("%d",sum);  
+   return 0;  
+}  
 ```
 
 ## Output:
 
-<img width="603" height="236" alt="Screenshot 2026-03-19 131615" src="https://github.com/user-attachments/assets/e9096a9f-dba5-413e-adbc-50c976fee1a9" />
+<img width="581" height="200" alt="Screenshot 2026-03-19 131230" src="https://github.com/user-attachments/assets/550b287b-57de-4dae-b379-4d7f1a7ca224" />
 
 
 ## Result:
